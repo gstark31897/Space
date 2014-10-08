@@ -1,0 +1,3 @@
+DisplayName:Square Hull
+VertexList:-1,-1,-1,1,1,1,1,-1
+FaceList:0,1,2,0,2,3
