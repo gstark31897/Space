@@ -5,6 +5,7 @@
  */
 package com.base.engine;
 
+import com.base.engine.ship.PartList;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
@@ -28,6 +29,8 @@ public class Main {
         glOrtho(0, Display.getWidth(), 0, Display.getHeight(), -1, 1);
         glMatrixMode(GL_MODELVIEW);
         glClearColor(0, 0, 0, 0);
+        
+        PartList.init();
         
         while(!Display.isCloseRequested()) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
