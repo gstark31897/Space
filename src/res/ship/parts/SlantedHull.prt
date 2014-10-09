@@ -1,6 +1,6 @@
-DisplayName:Corner Hull
+DisplayName:Slanted Hull
 Groups:1
-Group:1
+Group:0
 Color:1,1,1
 Vertex:-1,-1,-1,1,1,-1
-Faces:0,1,2
+Face:0,1,2
