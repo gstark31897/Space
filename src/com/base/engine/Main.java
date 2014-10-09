@@ -6,6 +6,7 @@
 package com.base.engine;
 
 import com.base.engine.ship.PartList;
+import com.base.engine.ship.Ship;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
@@ -32,28 +33,20 @@ public class Main {
         glMatrixMode(GL_MODELVIEW);
         glClearColor(0, 0, 0, 0);
         
-        int r = 0;
-        boolean was = false;
+        Ship s = new Ship(new int[][]{{0, 0, 0, 0},{0, 0, 0, 0},{0, 0, 0, 0},{5, 3, 4, 5}}, new int[][]{{0, 0, 0, 0},{0, 0, 0, 0},{0, 0, 0, 0},{3, 0, 0, 0}});
         
         while(!Display.isCloseRequested()) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glLoadIdentity();
             
             glTranslatef(400, 300, 0);
-            glScalef(10, 10, 10);
+            glScalef(20, 20, 20);
             glRotatef(Mouse.getX(), 0, 0, 1);
             
-            if(Keyboard.isKeyDown(Keyboard.KEY_RIGHT) && !was) {
-                r++;
-                was = true;
-            }else if(!Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
-                was = false;
-            }
+            s.render();
             
-            glBegin(GL_TRIANGLES);
-            for(int i = 0; i < 5; i++)
-                PartList.render(i, i*2, 0, r%4);
-            glEnd();
+            Display.update();
+            Display.sync(60);
         }
     }
 }
