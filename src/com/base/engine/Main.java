@@ -54,12 +54,6 @@ public class Main {
             for(int i = 0; i < 5; i++)
                 PartList.render(i, i*2, 0, r%4);
             glEnd();
-            
-            Display.update();
-            Display.sync(60);
         }
-        
-        Display.destroy();
     }
-    
 }
