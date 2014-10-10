@@ -76,4 +76,8 @@ public class PartList {
     public static void render(int p, float x, float y, int r) {
         partDefs[p].render(x, y, r);
     }
+    
+    public static int getPartCount() {
+        return partDefs.length;
+    }
 }
