@@ -70,6 +70,9 @@ public class ShipBuilder {
         if(Mouse.isButtonDown(0)) {
             rotations[(int)(Mouse.getY()/40.0+0.5)][(int)(Mouse.getX()/40.0+0.5)] = rotation;
             parts[(int)(Mouse.getY()/40.0+0.5)][(int)(Mouse.getX()/40.0+0.5)] = part;
+        }else if(Mouse.isButtonDown(1)) {
+            rotations[(int)(Mouse.getY()/40.0+0.5)][(int)(Mouse.getX()/40.0+0.5)] = 0;
+            parts[(int)(Mouse.getY()/40.0+0.5)][(int)(Mouse.getX()/40.0+0.5)] = -1;
         }
     }
     

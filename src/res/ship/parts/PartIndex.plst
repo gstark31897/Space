@@ -1,4 +1,4 @@
-Parts:7
+Parts:8
 0:SquareHull.prt
 1:SlantedHull.prt
 2:Fancy.prt
@@ -6,3 +6,4 @@ Parts:7
 4:LaserCannon_1.prt
 5:ArmoredCornerHull.prt
 6:ArmoredEdgeHull.prt
+7:Thruster.prt
